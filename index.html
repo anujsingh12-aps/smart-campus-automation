@@ -134,6 +134,31 @@
           <button onclick="addAnnouncement()">Add Announcement</button>
         </div>
       </section>
+      <section class="chatbot">
+
+    <div class="chat-header">
+        <h2>🤖 Campus AI Assistant</h2>
+        <p>Ask me about the campus</p>
+    </div>
+
+    <div id="chatMessages" class="chat-messages">
+        <div class="bot-message">
+            Hello! 👋 I'm your Campus Assistant. How can I help you?
+        </div>
+    </div>
+
+    <div class="chat-input">
+        <input
+            type="text"
+            id="userMessage"
+            placeholder="Ask something..."
+            onkeydown="handleChat(event)"
+        >
+
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+</section>
     </main>
 
     <footer>
