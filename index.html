@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Campus Automation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1>Smart Campus Automation</h1>
+        <p>Automating everyday campus activities</p>
+      </div>
+
+      <div class="status">
+        <span class="dot"></span>
+        System Online
+      </div>
+    </header>
+
+    <main>
+      <section class="dashboard">
+        <div class="card">
+          <h3>🏫 Active Rooms</h3>
+          <h2 id="activeRooms">2</h2>
+          <p>Currently occupied</p>
+        </div>
+
+        <div class="card">
+          <h3>💡 Lights</h3>
+          <h2 id="lights">ON</h2>
+          <p>Automatic control</p>
+        </div>
+
+        <div class="card">
+          <h3>🌀 Fans</h3>
+          <h2 id="fans">ON</h2>
+          <p>Automatic control</p>
+        </div>
+
+        <div class="card">
+          <h3>👨‍🎓 Attendance</h3>
+          <h2 id="attendance">78%</h2>
+          <p>Today's attendance</p>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="panel">
+          <h2>🏫 Classroom Automation</h2>
+
+          <div class="room">
+            <div>
+              <h3>Room 101</h3>
+              <p>👥 35 Students</p>
+            </div>
+
+            <div class="controls">
+              <button onclick="toggleLight('room101')">💡 Light</button>
+              <button onclick="toggleFan('room101')">🌀 Fan</button>
+            </div>
+
+            <p id="room101Status">Status: Occupied</p>
+          </div>
+
+          <div class="room">
+            <div>
+              <h3>Room 102</h3>
+              <p>👥 28 Students</p>
+            </div>
+
+            <div class="controls">
+              <button onclick="toggleLight('room102')">💡 Light</button>
+              <button onclick="toggleFan('room102')">🌀 Fan</button>
+            </div>
+
+            <p id="room102Status">Status: Occupied</p>
+          </div>
+
+          <div class="room">
+            <div>
+              <h3>Room 103</h3>
+              <p>👥 0 Students</p>
+            </div>
+
+            <div class="controls">
+              <button onclick="toggleLight('room103')">💡 Light</button>
+              <button onclick="toggleFan('room103')">🌀 Fan</button>
+            </div>
+
+            <p id="room103Status">Status: Empty</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>👨‍🎓 Attendance</h2>
+
+          <div class="attendance-box">
+            <h1 id="attendanceValue">78%</h1>
+
+            <div class="progress">
+              <div id="progressBar"></div>
+            </div>
+
+            <p>Today's average attendance</p>
+
+            <button onclick="markAttendance()">Mark Attendance</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>📢 Announcements</h2>
+
+          <div id="announcements">
+            <div class="announcement">
+              <strong>🔔 Class Update</strong>
+              <p>Room 101 lecture starts at 11:00 AM.</p>
+            </div>
+
+            <div class="announcement">
+              <strong>💻 Lab Update</strong>
+              <p>Computer Lab 2 is available today.</p>
+            </div>
+          </div>
+
+          <input
+            type="text"
+            id="announcementInput"
+            placeholder="Enter new announcement"
+          />
+
+          <button onclick="addAnnouncement()">Add Announcement</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Smart Campus Automation System © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
